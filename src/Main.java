@@ -107,6 +107,7 @@ public class Main {
             }
         }
     }
+
     public static void compareSalariesMin(int number, int department, Employee[] archiveOfEmployee) {
         int counter = 0;
         for (Employee employee : archiveOfEmployee) {
@@ -117,10 +118,11 @@ public class Main {
                 }
             }
         }
-        if (counter==0) {
+        if (counter == 0) {
             System.out.println("Таких сотрудников нет");
         }
     }
+
     public static void compareSalariesMax(int number, int department, Employee[] archiveOfEmployee) {
         int counter = 0;
         for (Employee employee : archiveOfEmployee) {
@@ -131,41 +133,42 @@ public class Main {
                 }
             }
         }
-            if (counter==0) {
-                System.out.println("Таких сотрудников нет");
+        if (counter == 0) {
+            System.out.println("Таких сотрудников нет");
         }
     }
-        public static void main (String[]args){
-            Employee[] archiveOfEmployee = new Employee[10];
-            archiveOfEmployee[0] = new Employee("Кириллов Игорь Викторович  ", 3, 98123);
-            archiveOfEmployee[1] = new Employee("Перетёртов Андрей Максимович", 2, 23904);
-            archiveOfEmployee[2] = new Employee("Андреев Тимур Викторович", 1, 30498);
-            archiveOfEmployee[3] = new Employee("Каленич Андрей Витальевич", 4, 32924);
-            archiveOfEmployee[4] = new Employee("Кучерена Екатерина Васильевна", 5, 19419);
-            archiveOfEmployee[5] = new Employee("Иванов Иван Иванович", 3, 42164);
-            archiveOfEmployee[6] = new Employee("Андеева Юлия Викторовна", 2, 20000);
-            archiveOfEmployee[7] = new Employee("Рядно Владислав Александрович", 4, 100233);
-            archiveOfEmployee[8] = new Employee("Безверхов Эдуард Тимурович", 5, 42101);
-            archiveOfEmployee[9] = new Employee("Ерохин Максим Эдуардович", 1, 67412);
-            listOfEmployees(archiveOfEmployee);
-            System.out.println(spendingOnSalaries(archiveOfEmployee));
-            System.out.println(salaryMin(archiveOfEmployee));
-            System.out.println(salaryMax(archiveOfEmployee));
-            System.out.println(salaryAverage(archiveOfEmployee));
-            for (Employee employee : archiveOfEmployee) {
-                System.out.println(employee.getName());
-            }
-            indexSalary(archiveOfEmployee);
-            listOfEmployees(archiveOfEmployee);
-            System.out.println(salaryMinInDepartment(5, archiveOfEmployee));
-            System.out.println(salaryMaxInDepartment(5, archiveOfEmployee));
-            System.out.println(spendingOnSalariesInDepartment(5, archiveOfEmployee));
-            System.out.println(averageSalaryInDepartment(5, archiveOfEmployee));
-            indexSalariesInDepartment(1.05f, 5, archiveOfEmployee);
-            listOfEmployees(archiveOfEmployee);
-            listOfDepartment(5, archiveOfEmployee);
-            compareSalariesMin(30000,5,archiveOfEmployee);
-            compareSalariesMax(30000,5,archiveOfEmployee);
+
+    public static void main(String[] args) {
+        Employee[] archiveOfEmployee = new Employee[10];
+        archiveOfEmployee[0] = new Employee("Кириллов Игорь Викторович  ", 3, 98123);
+        archiveOfEmployee[1] = new Employee("Перетёртов Андрей Максимович", 2, 23904);
+        archiveOfEmployee[2] = new Employee("Андреев Тимур Викторович", 1, 30498);
+        archiveOfEmployee[3] = new Employee("Каленич Андрей Витальевич", 4, 32924);
+        archiveOfEmployee[4] = new Employee("Кучерена Екатерина Васильевна", 5, 19419);
+        archiveOfEmployee[5] = new Employee("Иванов Иван Иванович", 3, 42164);
+        archiveOfEmployee[6] = new Employee("Андеева Юлия Викторовна", 2, 20000);
+        archiveOfEmployee[7] = new Employee("Рядно Владислав Александрович", 4, 100233);
+        archiveOfEmployee[8] = new Employee("Безверхов Эдуард Тимурович", 5, 42101);
+        archiveOfEmployee[9] = new Employee("Ерохин Максим Эдуардович", 1, 67412);
+        listOfEmployees(archiveOfEmployee);
+        System.out.println(spendingOnSalaries(archiveOfEmployee));
+        System.out.println(salaryMin(archiveOfEmployee));
+        System.out.println(salaryMax(archiveOfEmployee));
+        System.out.println(salaryAverage(archiveOfEmployee));
+        for (Employee employee : archiveOfEmployee) {
+            System.out.println(employee.getName());
         }
+        indexSalary(archiveOfEmployee);
+        listOfEmployees(archiveOfEmployee);
+        System.out.println(salaryMinInDepartment(5, archiveOfEmployee));
+        System.out.println(salaryMaxInDepartment(5, archiveOfEmployee));
+        System.out.println(spendingOnSalariesInDepartment(5, archiveOfEmployee));
+        System.out.println(averageSalaryInDepartment(5, archiveOfEmployee));
+        indexSalariesInDepartment(1.05f, 5, archiveOfEmployee);
+        listOfEmployees(archiveOfEmployee);
+        listOfDepartment(5, archiveOfEmployee);
+        compareSalariesMin(30000, 5, archiveOfEmployee);
+        compareSalariesMax(30000, 5, archiveOfEmployee);
     }
+}
 

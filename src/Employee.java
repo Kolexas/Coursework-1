@@ -14,40 +14,49 @@ public class Employee {
             throw new ArrayIndexOutOfBoundsException("Такого отдела не существует");
         }
         this.salary = salary;
-        this.id =counter++;
+        this.id = counter++;
     }
+
     public String getName() {
         return this.name;
     }
+
     public int getDepartment() {
         return department;
     }
-        public double getSalary () {
-            return salary;
-        }
-        public void setDepartment ( int department){
-            this.department = department;
-        }
-        public void setSalary ( double salary){
-            this.salary = salary;
-        }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    public void setDepartment(int department) {
+        this.department = department;
+    }
+
+    public void setSalary(double salary) {
+        this.salary = salary;
+    }
+
     public int getId() {
         return id;
     }
+
     @Override
     public String toString() {
-        return id + " " + name + " " + department + " отдел"  + " " + salary + " руб";
+        return id + " " + name + " " + department + " отдел" + " " + salary + " руб";
     }
+
     @Override
-        public boolean equals (Object other){
-            if (this.getClass() != other.getClass()) {
-                return false;
-            }
-            Employee e1 = (Employee) other;
-            return name.equals(e1.name);
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
         }
+        Employee e1 = (Employee) other;
+        return name.equals(e1.name);
+    }
+
     @Override
-        public int hashCode () {
-            return Objects.hash(name);
-        }
+    public int hashCode() {
+        return Objects.hash(name);
+    }
 }
